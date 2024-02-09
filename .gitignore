@@ -1,0 +1,4 @@
+*.int
+*.txt
+!ff1.txt
+boot/
