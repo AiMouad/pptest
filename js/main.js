@@ -56,3 +56,77 @@ console.log(testSore(-4));
 console.log(testSore(2,false));
 
 //---------------------------------------------------
+function switche(a){
+    switch(a){
+        case "a": return "allumentation";
+        case "b": return "brillance";
+        case "c": return "cat";
+        default : return "its not A or B or C...";
+
+    }
+}
+console.log(switche("c"));
+//---------------------------------------------------
+//Ternary Operators
+let soup = "CHicken Noodle Soup";
+let isCustomerBAnned = false;
+let soupAccess = isCustomerBAnned ? "soory , No soup for you!" : soup ?`Yes, we have ${soup} today`:"Sorry, No soup today"
+let response = soup ?"Yes, We have soup":"Sorry, No soup today"
+console.log(soupAccess);
+let res = 55;
+let gr = res>80 ? "A": res>60 ? "B": res>40 ? "C": res>20 ? "D" : "F";
+console.log(gr);
+//---------------------------------------------------
+// user input
+/*
+//alert("HELLO")
+//let boulienn =confirm ("ok ===True\nCancel===False");
+//MMoconsole.log(boulienn);
+let name = prompt("Youe NAme Mr please");
+if(name) {
+    console.log(name.length);
+    console.log(name.trim().length);
+    console.log(name.trim());
+
+}
+else console.log("You didn't enter you name.");
+*/
+//---------------------------------------------------
+// First Game
+let playGame = confirm("SHall we play rock,papper, or scissors?");
+if(playGame){
+    //PLay Game
+    let x = prompt("Enter : (rock or papper or scissors)");
+    if (x==="rock" ||x==="papper"||x==="scissors"){
+        let y = Math.floor((Math.random()*3)+1);
+        let z;
+        switch (y){
+            case 1 : console.log("Bot :rock");z="rock";break;
+            case 2 : console.log("Bot :papper");z="papper";break;
+            case 3 : console.log("Bot :scissors");z="scissors";break;
+            default : console.log("Erreur!");
+        }
+        if(x===z) console.log("Null");
+        else{
+            if(x==="Rock"){
+                if(z==="papper") console.log("Bot win!");
+                else  console.log("You win!");
+            }
+            else if(x==="papper"){
+                if(z==="scissors") console.log("Bot win!");
+                else  console.log("You win!");
+            }
+            else if(x==="Rock"){
+                if(z==="papper") console.log("Bot win!");
+                else  console.log("You win!");
+            }
+            else{
+                if(z==="Rock") console.log("Bot win!");
+                else  console.log("You win!");
+            }
+        }
+    }
+    else console.log("Erreur in your enter !!!");
+}
+else    alert("Mybe Next Time :)")
+
